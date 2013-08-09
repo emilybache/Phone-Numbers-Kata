@@ -25,5 +25,14 @@ data AddressBook = AddressBook [TelephoneNumber]
 isConsistent :: AddressBook -> Bool
 isConsistent (AddressBook numbers) = not (any id (map (isPrefixOf numbers) numbers))
 
+instance Arbitrary AddressBook where
+  arbitrary = do
+    nums <- listOf1 arbitrary
+    return (AdddressBook numbers)
+    
+
 isPrefixOf :: [TelephoneNumber] -> TelephoneNumber -> Bool
-isPrefixOf = undefined
+isPrefixOf nums num = any (startsWith num)  nums
+
+startsWith :: TelephoneNumber -> TelephoneNumber -> Bool
+startsWith (TelephoneNumber a) (TelephoneNumber b) = all id (zipWith (==) a b)
