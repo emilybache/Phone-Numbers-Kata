@@ -1,3 +1,5 @@
+-- Not intended to be good Haskell, just demonstrating something I find intesting, using QuickCheck to generate
+-- test data
 module PhoneNumber where
 
 import Test.QuickCheck
@@ -53,9 +55,12 @@ isNumber (Number _) = True
 isNumber _          = False
 
 -- Now, with this naive definition we can create test data that satisfies the definitions
+
+-- Create a list of addressbooks that are not consistent
 inconsistent :: IO [AddressBook]
 inconsistent = sample' (suchThat arbitrary (not . isConsistent))
 
+-- Create a list of consistent address books
 consistent :: IO [AddressBook]
 consistent = sample' (suchThat arbitrary isConsistent)
 
