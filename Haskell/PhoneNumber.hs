@@ -28,8 +28,7 @@ isConsistent (AddressBook numbers) = not (any id (map (isPrefixOf numbers) numbe
 instance Arbitrary AddressBook where
   arbitrary = do
     nums <- listOf1 arbitrary
-    return (AdddressBook numbers)
-    
+    return (AddressBook nums)   
 
 isPrefixOf :: [TelephoneNumber] -> TelephoneNumber -> Bool
 isPrefixOf nums num = any (startsWith num)  nums
