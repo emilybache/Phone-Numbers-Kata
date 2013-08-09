@@ -2,6 +2,8 @@
 
 This repo contains some sample data you could use to help test your solution to the Phone Numbers code kata. It also contains the python script I used to create the sample data. You can tweak it to create data that suits your needs.
 
+To run the generate_data.py script, you'll need to install [Python 3](http://python.org).
+
 The Names.csv file is from ["Generating Random Names as Test Data"](http://www.markrichman.com/2007/09/26/generating-random-names-as-test-data/), and that page says it is adapted from US census data. I have just converted his file from excel to csv to make it easier to handle.
 
 # Kata description
