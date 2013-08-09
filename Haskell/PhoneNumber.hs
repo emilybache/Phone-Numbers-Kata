@@ -1,5 +1,7 @@
 module PhoneNumber where
 
+import Test.QuickCheck
+
 data Digit = Number Int
            | Space
            | Dash deriving (Show,Eq)	   
