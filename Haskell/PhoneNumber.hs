@@ -52,8 +52,7 @@ isNumber :: Digit -> Bool
 isNumber (Number _) = True
 isNumber _          = False
 
--- Now, with this naive definition we can create test data
-
+-- Now, with this naive definition we can create test data that satisfies the definitions
 inconsistent :: IO [AddressBook]
 inconsistent = sample' (suchThat arbitrary (not . isConsistent))
 
