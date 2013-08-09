@@ -1,6 +1,7 @@
 module PhoneNumber where
 
 import Test.QuickCheck
+import Data.List ((\\))
 
 maxLength :: Int
 maxLength = 15
@@ -20,10 +21,10 @@ instance Arbitrary TelephoneNumber where
     nums <- listOf1 arbitrary
     return (TelephoneNumber nums)
 
-data AddressBook = AddressBook [TelephoneNumber]
+data AddressBook = AddressBook [TelephoneNumber] deriving Show
 
 isConsistent :: AddressBook -> Bool
-isConsistent (AddressBook numbers) = not (any id (map (isPrefixOf numbers) numbers))
+isConsistent (AddressBook numbers) = not (any id (map (\n -> isPrefixOf (numbers \\ [n]) n) numbers))
 
 instance Arbitrary AddressBook where
   arbitrary = do
@@ -33,5 +34,6 @@ instance Arbitrary AddressBook where
 isPrefixOf :: [TelephoneNumber] -> TelephoneNumber -> Bool
 isPrefixOf nums num = any (startsWith num)  nums
 
+-- Deliberately hyper naive!
 startsWith :: TelephoneNumber -> TelephoneNumber -> Bool
 startsWith (TelephoneNumber a) (TelephoneNumber b) = all id (zipWith (==) a b)
