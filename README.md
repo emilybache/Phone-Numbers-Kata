@@ -8,7 +8,7 @@ The Names.csv file is from ["Generating Random Names as Test Data"](http://www.m
 
 # Kata description
 
-_this description is taken from [http://cyber-dojo.com](http://cyber-dojo.com)_
+_A description of this Kata is available in my book ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook). The following description is however taken directly from [http://cyber-dojo.com](http://cyber-dojo.com)_
 
 Given a list of phone numbers, determine if it is 
 consistent. In a consistent phone list no number 
