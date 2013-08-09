@@ -24,7 +24,8 @@ def random_phonenumber():
 def name_generator(names_file):
     names_source = csv.reader(names_file)
     for row in names_source:
-        yield("{0} {1}".format(row[randrange(0,2)], row[2]))
+        name = row[randrange(4,6)]
+        yield(name)
     
 
 def generate_phonenumbers(outfile, name_source, entry_count=1000):
@@ -35,8 +36,8 @@ def generate_phonenumbers(outfile, name_source, entry_count=1000):
         writer.writerow([name, number])   
 
 if __name__ == "__main__":
-    entry_count = 1000 # edit this to get a bigger file
-    with open("phone_data.txt", "w") as f:
+    entry_count = 10000 # edit this to get a bigger file
+    with open("phone_data_10000.txt", "w") as f:
         with open("Names.csv", encoding="UTF-8", newline='') as names_file:
             name_source = name_generator(names_file)
             generate_phonenumbers(f, name_source, entry_count)
