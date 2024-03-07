@@ -1,3 +1,5 @@
+_Support this and all my katas via [Patreon](https://www.patreon.com/EmilyBache)_
+
 # Phone Numbers Code Kata
 
 This repo contains some sample data you could use to help test your solution to the Phone Numbers code kata. It also contains the python script I used to create the sample data. You can tweak it to create data that suits your needs.
