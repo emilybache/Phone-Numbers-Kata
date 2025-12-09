@@ -6,11 +6,11 @@ This repo contains some sample data you could use to help test your solution to 
 
 To run the generate_data.py script, you'll need to install [Python 3](http://python.org).
 
-The Names.csv file is from ["Generating Random Names as Test Data"](http://www.markrichman.com/2007/09/26/generating-random-names-as-test-data/), and that page says it is adapted from US census data. I have just converted his file from excel to csv to make it easier to handle.
+The Names.csv file is from a blog post that is no longer available online, and which said it was adapted from US census data. I have converted this file from excel to csv to make it easier to handle.
 
 # Kata description
 
-_A description of this Kata is available in my book ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook). The following description is however taken directly from [http://cyber-dojo.com](http://cyber-dojo.com)_
+_A description of this Kata is available in my book ["The Coding Dojo Handbook"](http://leanpub.com/codingdojohandbook). The following description is however taken directly from [http://cyber-dojo.org](http://cyber-dojo.org)_
 
 Given a list of phone numbers, determine if it is 
 consistent. In a consistent phone list no number 
